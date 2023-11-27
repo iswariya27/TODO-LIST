@@ -7,7 +7,6 @@ import {
   updateTodos,
 } from "../redux/reducer";
 import Todoitem from "./Todoitem";
-import { AnimatePresence, motion } from "framer-motion";
 
 const mapStateToProps = (state) => {
   return {
@@ -45,7 +44,7 @@ const DisplayTodos = (props) => {
         </button>
       </div>
       <ul>
-        <AnimatePresence>
+        
           {props.todos.length > 0 && sort === "active"
             ? props.todos.map((item) => {
                 return (
@@ -89,7 +88,7 @@ const DisplayTodos = (props) => {
                 );
               })
             : null}
-        </AnimatePresence>
+       
       </ul>
     </div>
   );
